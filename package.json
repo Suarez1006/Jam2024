@@ -1,21 +1,22 @@
 {
-  "name": "base",
-  "version": "1.0.0",
-  "description": "",
-  "main": "src/index.ts",
+  "name": "phaser-base",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "webpack serve --mode development --open",
-    "build": "webpack --mode production"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "phaser": "^3.80.1",
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.4.5",
-    "webpack": "^5.91.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "@killabunnies/eslint-config": "^2.0.2",
+    "@typescript-eslint/eslint-plugin": "^7.6.0",
+    "eslint": "^8.0.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  },
+  "dependencies": {
+    "phaser": "^3.80.1"
   }
 }
