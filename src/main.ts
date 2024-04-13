@@ -1,27 +1,20 @@
 import Phaser from "phaser";
+import { Preload } from "./scenes/Preload";
+import { MainMenu } from "./scenes/MainMenu";
 
-class Example extends Phaser.Scene {
-	public preload(): void {
-		this.load.image("logo", "img/2RGs.jpg");
-	}
-
-	public create(): void {
-		const logo = this.add.image(400, 300, "logo");
-		logo.scale = 0.4;
-	}
-}
-
-const config = {
+const config: Phaser.Types.Core.GameConfig = {
 	type: Phaser.AUTO,
-	width: 800,
-	height: 600,
-	scene: Example,
+	scale: {
+		mode: Phaser.Scale.ScaleModes.RESIZE,
+		autoCenter: Phaser.Scale.CENTER_BOTH,
+	},
 	physics: {
 		default: "arcade",
 		arcade: {
-			gravity: { y: 200, x: 0 },
+			gravity: { x: 0, y: 750 },
 		},
 	},
+	scene: [Preload, MainMenu],
 };
 
-new Phaser.Game(config);
+export default new Phaser.Game(config);
