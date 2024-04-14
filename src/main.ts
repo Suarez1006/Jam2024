@@ -8,12 +8,6 @@ const config: Phaser.Types.Core.GameConfig = {
 		mode: Phaser.Scale.ScaleModes.RESIZE,
 		autoCenter: Phaser.Scale.CENTER_BOTH,
 	},
-	physics: {
-		default: "arcade",
-		arcade: {
-			gravity: { x: 0, y: 750 },
-		},
-	},
 	scene: [Preload, MainMenu],
 };
 

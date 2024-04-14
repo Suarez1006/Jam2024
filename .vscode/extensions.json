@@ -1,0 +1,9 @@
+{
+	"recommendations": [
+		"ms-vscode.vscode-typescript-next",
+		"kamikillerto.vscode-colorize",
+		"vivaxy.vscode-conventional-commits",
+		"dbaeumer.vscode-eslint",
+		"ipatalas.vscode-postfix-ts"
+	],
+}
